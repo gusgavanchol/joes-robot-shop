@@ -191,4 +191,18 @@ export class CatalogComponent {
   getFilteredProducts() {
     return this.filter == '' ? this.products : this.products.filter((product) => product.category == this.filter);
   }
+
+/*   getDiscountedClasses(product: IProduct) {
+    return { strikethrough: product.discount > 0 };
+  } */
+
+/*   getDiscountedClasses(product: IProduct) {
+    if(product.discount > 0) return 'strikethrough';
+    else return '';
+  } */
+
+  getDiscountedClasses(product: IProduct) {
+    if(product.discount > 0) return ['strikethrough'];
+    else return [];
+  }
 }

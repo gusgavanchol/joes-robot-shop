@@ -19,7 +19,18 @@
             </div>
           </div>
           <div class="price">
-            <div *ngIf="product.discount == 0">{{ product?.price | currency: 'USD'}}</div>
+            <div [ngStyle]="{ 'color': product.discount > 0 ? 'red' : ''}" [ngClass]="getDiscountedClasses(product)">
+              {{ product?.price | currency: 'USD'}}
+            </div>
+<!--             <div [style.color]="product.discount > 0 ? 'red' : ''" class="bold" [ngClass]="getDiscountedClasses(product)">
+              {{ product?.price | currency: 'USD'}}
+            </div> -->
+<!--             <div [ngClass]="{ strikethrough: product.discount > 0 }">
+              {{ product?.price | currency: 'USD'}}
+            </div> -->
+<!--               <div [class.strikethrough]="product.discount > 0">
+                {{ product?.price | currency: 'USD'}}
+              </div> -->
             <div *ngIf="product.discount > 0" class="discount"> 
               {{ (product.price * (1 - product.discount)).toFixed(2) | currency: 'USD'}}
             </div>
