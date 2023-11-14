@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CatalogComponent,
-    SiteHeaderComponent
+    SiteHeaderComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule
