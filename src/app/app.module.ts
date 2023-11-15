@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
