@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { IUser, IUserCredentials } from 'src/app/interfaces/user';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/user/services/user.service';
 
 @Component({
   selector: 'app-sign-in',

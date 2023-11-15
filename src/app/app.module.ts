@@ -9,10 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { SignInComponent } from './pages/sign-in/sign-in.component';
 
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { UserModule } from './user/user.module';
 
 
 
@@ -23,10 +23,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     CatalogComponent,
     SiteHeaderComponent,
     ProductDetailsComponent,
-    CartComponent,
-    SignInComponent
+    CartComponent
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule, UserModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

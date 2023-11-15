@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { SignInComponent } from './pages/sign-in/sign-in.component';
+import { SignInComponent } from './user/pages/sign-in/sign-in.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, title: "Home - Joe's Robot Shop" },
