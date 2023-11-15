@@ -26,12 +26,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     CartComponent,
     SignInComponent
   ],
-  imports: [
-    BrowserModule, 
-    HttpClientModule, 
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
