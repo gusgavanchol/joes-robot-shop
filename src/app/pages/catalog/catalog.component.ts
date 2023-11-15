@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/interfaces/product-model';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -13,7 +14,9 @@ export class CatalogComponent implements OnInit {
   filter: string = '';
   
   constructor(private cartService: CartService,
-              private productService: ProductService) {
+              private productService: ProductService,
+              private router: Router,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -22,6 +25,10 @@ export class CatalogComponent implements OnInit {
         this.products = data;
       }
     );
+
+    this.route.queryParams.subscribe((params) => {
+      this.filter = params['filter'] ?? '';
+    })
   }
 
   getFilteredProducts() {
@@ -30,5 +37,6 @@ export class CatalogComponent implements OnInit {
 
   addToCart(product: IProduct) {
     this.cartService.add(product);
+    this.router.navigate(['/cart'])
   }
 }
